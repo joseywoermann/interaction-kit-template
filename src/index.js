@@ -23,5 +23,5 @@ export default new Application({
         ButtonCommand,
         AgeCommand
     )
-    // This will start the application / bot
+    // This will start the bot
     .startServer();

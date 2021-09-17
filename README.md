@@ -42,6 +42,31 @@ DEVELOPMENT_SERVER_ID=
 
 # Code example:
 
+`index.js`
+
+```js
+import { Application } from "interaction-kit";
+
+// Import the commands
+import PingCommand from "./commands/ping";
+import InviteCommand from "./commands/invite";
+
+const { APPLICATION_ID, PUBLIC_KEY, TOKEN } = process.env;
+
+// Create the application / client and pass the authentication details
+export default new Application({
+    applicationID: APPLICATION_ID,
+    publicKey: PUBLIC_KEY,
+    token: TOKEN,
+})
+    // Add the commands. These will be updates automatically when the bot restarts
+    .addCommands(PingCommand, InviteCommand)
+    // This will start the bot
+    .startServer();
+```
+
+`commands/ping.js`
+
 ```js
 import { Command } from "interaction-kit";
 
