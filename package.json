@@ -1,0 +1,17 @@
+{
+    "name": "interaction-kit-template",
+    "version": "1.0.0",
+    "description": "A basic interaction-kit template.",
+    "type": "module",
+    "scripts": {
+        "start": "node --es-module-specifier-resolution=node src/index.js"
+    },
+    "author": "Josey C. Wörmann (joseywoermann)",
+    "license": "MIT",
+    "dependencies": {
+        "interaction-kit": "^0.1.2"
+    },
+    "devDependencies": {
+        "@types/node": "^16.9.2"
+    }
+}
